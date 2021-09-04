@@ -105,7 +105,7 @@ func BuildAgentConfig() *AgentConfig {
 
 func (c *AgentConfig) SetAgentConfig(ac map[string]interface{}) {
 	c.Name = applyKey(c.Name, ac, "Name").(string)
-	c.AESKey = applyKey(c.AESKey, ac, "AESKey").(string)
+	c.AESKey = applyKey(c.AESKey, ac, "abcdefghijklmnopqrstuvwxyz012346").(string)
 	c.Range = applyKey(c.Range, ac, "Range").(string)
 	c.Useragent = applyKey(c.Useragent, ac, "Useragent").(string)
 	c.Proxy = applyKey(c.Proxy, ac, "Proxy").(string)
